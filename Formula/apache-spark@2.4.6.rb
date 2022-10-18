@@ -8,7 +8,7 @@ class ApacheSparkAT246 < Formula
     head "https://github.com/apache/spark.git", branch: "master"
   
     bottle do
-      cellar: :any_skip_relocation
+      cellar :any_skip_relocation
     end
   
     depends_on "openjdk"
