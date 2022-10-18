@@ -7,10 +7,12 @@ class ApacheSparkAT246 < Formula
     sha256 "7174fee30057fbf226698ebfcfa7c2944a26197e149053aa29b26b250d1e1eba"
     head "https://github.com/apache/spark.git", branch: "master"
   
-    bottle :unneeded
+    bottle do
+      cellar: :any_skip_relocation
+    end
   
     depends_on "openjdk"
-  
+
     def install
       # Rename beeline to distinguish it from hive's beeline
       mv "bin/beeline", "bin/spark-beeline"
@@ -27,4 +29,3 @@ class ApacheSparkAT246 < Formula
                     "sc.parallelize(1 to 1000).count()")
     end
   end
-  
