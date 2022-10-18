@@ -7,9 +7,6 @@ class ApacheSparkAT246 < Formula
     sha256 "7174fee30057fbf226698ebfcfa7c2944a26197e149053aa29b26b250d1e1eba"
     head "https://github.com/apache/spark.git", branch: "master"
   
-    bottle do
-      cellar :any_skip_relocation
-    end
   
     depends_on "openjdk"
 
